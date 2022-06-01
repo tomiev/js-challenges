@@ -12,3 +12,4 @@ function bmi(weight, height) {
 
 // Test
 console.log(bmi(80, 1.80)); // expect 'Normal'
+console.log(bmi(50, 1.90)); // expect 'Underweight'
