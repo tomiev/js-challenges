@@ -9,7 +9,6 @@ function xo(str) {
 }
 
 // Test
-console.log(xo('XXXOOO')); // expect true
-console.log(xo('XOXOO')); // expect false
+console.log(xo('XOxOo')); // expect false
 console.log(xo('XOXOXO')); // expect true
-console.log(xo('ABCDEFG')); // expect true
+console.log(xo('ABCdEFG')); // expect true
