@@ -8,3 +8,4 @@ const dnaToRna = dna => dna.replace(/T/g, 'U');
 // Test
 console.log(dnaToRna("GCAT")); // expect GCAU
 console.log(dnaToRna("TTTT")); // expect UUUU
+console.log(dnaToRna('')); // expect ''
