@@ -12,3 +12,4 @@ const countSheep = num => {
 
 // Test
 console.log(countSheep(3));
+console.log(countSheep(7));
