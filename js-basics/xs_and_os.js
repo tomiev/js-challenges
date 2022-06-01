@@ -8,6 +8,13 @@ function xo(str) {
   return xArr.length === oArr.length;
 }
 
+// Alternate method
+// function xo(str) {
+//   let x = str.match(/x/gi);
+//   let o = str.match(/o/gi);
+//   return (x && x.length) === (o && o.length);
+// }
+
 // Test
 console.log(xo('XOxOo')); // expect false
 console.log(xo('XOXOXO')); // expect true
