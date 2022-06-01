@@ -4,8 +4,5 @@ function findSmallestInt(arr) {
 }
 
 // tests
-const numbers = [3, 44, 7, 6, 52, 101, -4, 77];
-console.log(findSmallestInt(numbers));
-
-const numbers2 = [34, 15, 88, 2];
-console.log(findSmallestInt(numbers2));
+console.log(findSmallestInt([3, 44, 7, 6, 52, 101, -4, 77])); // expect -4
+console.log(findSmallestInt([34, 15, 88, 2])); // expect 2
