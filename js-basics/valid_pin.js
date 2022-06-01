@@ -7,7 +7,7 @@ function validatePin(pin) {
 };
 
 // Test
-console.log(validatePin('8456')); // expect true
+console.log(validatePin('0000')); // expect true
 console.log(validatePin('845678')); // expect true
 console.log(validatePin('abc123')); // expect false
 console.log(validatePin('12345')); // expect false
