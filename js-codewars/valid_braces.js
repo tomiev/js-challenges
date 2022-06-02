@@ -7,18 +7,19 @@ function validBraces(braces) {
   const pending = [];
   for (let i = 0; i < braces.length; i += 1) {
     switch (braces[i]) {
+      /* Opening braces pushed to 'pending' */
       case '(': case '[': case '{': pending.push(braces[i]); break;
+      /* Each closing brace should match the last brace in 'pending', else returns false */
       case ')': if (pending.pop() !== '(') return false; break;
       case ']': if (pending.pop() !== '[') return false; break;
       case '}': if (pending.pop() !== '{') return false; break;
       default:
-      // No default
     }
   }
   return pending.length === 0;
 }
 
 // Test
-console.log(validBraces('([])')); // Expect true
-console.log(validBraces('([}]')); // Expect false
-console.log(validBraces('({})[({})]')); // Expect true
+console.log(validBraces('([])')); /* Expect true */
+console.log(validBraces('([}]')); /* Expect false */
+console.log(validBraces('({})[({})]')); /* Expect true */
