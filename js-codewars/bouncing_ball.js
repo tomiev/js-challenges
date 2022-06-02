@@ -15,7 +15,7 @@ function bouncingBall(h, bounce, window) {
   let bounceHeight = bounce * h;
   let sightings = 1;
 
-  /* Return -1 if paramaters are invalid */
+  /* Return -1 if parameters are invalid */
   if (bounce >= 1 || bounce < 0 || h <= window) {
     return -1;
   }
