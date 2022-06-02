@@ -12,13 +12,13 @@ function validBraces(braces) {
       case ']': if (pending.pop() !== '[') return false; break;
       case '}': if (pending.pop() !== '{') return false; break;
       default:
-      // do nothing
+      // No default
     }
   }
   return pending.length === 0;
 }
 
 // Test
-console.log(validBraces('([])')); // expect true
-console.log(validBraces('([}]')); // expect false
-console.log(validBraces('({})[({})]')); // expect true
+console.log(validBraces('([])')); // Expect true
+console.log(validBraces('([}]')); // Expect false
+console.log(validBraces('({})[({})]')); // Expect true
