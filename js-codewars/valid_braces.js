@@ -4,18 +4,18 @@ if it's invalid. A string of braces is considered valid if all braces are matche
 with the correct brace. */
 
 function validBraces(braces) {
-  const depth = [];
+  const pending = [];
   for (let i = 0; i < braces.length; i += 1) {
     switch (braces[i]) {
-      case '(': case '[': case '{': depth.push(braces[i]); break;
-      case ')': if (depth.pop() !== '(') return false; break;
-      case ']': if (depth.pop() !== '[') return false; break;
-      case '}': if (depth.pop() !== '{') return false; break;
+      case '(': case '[': case '{': pending.push(braces[i]); break;
+      case ')': if (pending.pop() !== '(') return false; break;
+      case ']': if (pending.pop() !== '[') return false; break;
+      case '}': if (pending.pop() !== '{') return false; break;
       default:
       // do nothing
     }
   }
-  return depth.length === 0;
+  return pending.length === 0;
 }
 
 // Test
