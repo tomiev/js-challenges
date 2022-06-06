@@ -5,8 +5,8 @@ If the number is a multiple of both 3 and 5, only count it once. */
 function solution(number) {
   let sum = 0;
 
-  /* Iterates backwards from the integer below 'number' to 1 */
-  for (let i = (number - 1); i > 0; i -= 1) {
+  /* Iterates from 1 to the integer below 'number' */
+  for (let i = 1; i < number; i += 1) {
     if (i % 5 === 0 || i % 3 === 0) {
       sum += i;
     }
