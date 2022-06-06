@@ -6,7 +6,7 @@ function solution(number) {
   let sum = 0;
 
   /* Iterates from 1 to the integer below 'number' */
-  for (let i = 1; i < number; i += 1) {
+  for (let i = 3; i < number; i += 1) {
     if (i % 5 === 0 || i % 3 === 0) {
       sum += i;
     }
