@@ -4,24 +4,12 @@ missing second character of the final pair with an underscore ('_').
 Example: 'abc' =>  ['ab', 'c_']. */
 
 function solution(string) {
-  const regexp = /[A-Z]{2}/gi;
+  const regexp = /.{2}/gi;
 
-  /* Returns empty array if string is empty */
-  if (string === '') {
-    return [];
-  }
-
-  /* Sorts string into pairs of two letters */
-  const pairs = string.match(regexp);
-
-  /* If odd number of letters in string, pairs final letter with an _ and pushes to array */
-  if (string.length % 2 !== 0) {
-    pairs.push(`${string[string.length - 1]}_`);
-  }
-
-  return pairs;
+  /* Add _ to string and split string into pairs of 2 OR return [] if string is empty */
+  return (`${string}_`).match(regexp) || [];
 }
 
 /* Tests */
-console.log(solution('abcdefg')); /* Expect [ ab, cd, ef, g_ ] */
+console.log(solution('abcdefg')); /* Expect [ 'ab', 'cd', 'ef', 'g_' ] */
 console.log(solution('')); /* Expect [] */
