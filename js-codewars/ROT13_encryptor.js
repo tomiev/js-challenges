@@ -13,11 +13,9 @@ function encrypt(message) {
   for (let i = 0; i < message.length; i += 1) {
     const char = message[i];
     if (abc.includes(char)) {
-      const index = abc.indexOf(char);
-      encrypted += (nop[index]);
+      encrypted += (nop[abc.indexOf(char)]);
     } else if (nop.includes(char)) {
-      const index = nop.indexOf(char);
-      encrypted += (abc[index]);
+      encrypted += (abc[nop.indexOf(char)]);
     } else if (/\W|[0-9]|_/.test(char)) {
       encrypted += char;
     }
