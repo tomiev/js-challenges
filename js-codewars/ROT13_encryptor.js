@@ -18,7 +18,7 @@ function encrypt(message) {
     } else if (alpha2.includes(letter)) {
       const index = alpha2.indexOf(letter);
       encrypted += (alpha1[index]);
-    } else if (/\W/.test(letter) || /[0-9]/.test(letter) || letter === '_') {
+    } else if (/\W|[0-9]|_/.test(letter)) {
       encrypted += letter;
     }
   }
