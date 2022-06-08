@@ -6,22 +6,9 @@ If there are numbers or special characters included in the string, they should b
 returned as they are. */
 
 function encrypt(message) {
-  let encrypted = '';
-  const abc = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const nop = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
-
-  for (let i = 0; i < message.length; i += 1) {
-    const char = message[i];
-    if (abc.includes(char)) {
-      encrypted += (nop[abc.indexOf(char)]);
-    } else if (nop.includes(char)) {
-      encrypted += (abc[nop.indexOf(char)]);
-    } else if (/\W|[0-9]|_/.test(char)) {
-      encrypted += char;
-    }
-  }
-
-  return encrypted;
+  const abc = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+  /* The index of the ROT-13 counterpart for a given character, char, is indexOf(char) + 13 */
+  return message.replace(/[a-z]/gi, (char) => abc[abc.indexOf(char) + 13]);
 }
 
 /* Tests */
