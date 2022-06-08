@@ -7,19 +7,19 @@ returned as they are. */
 
 function encrypt(message) {
   let encrypted = '';
-  const alpha1 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const alpha2 = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
+  const abc = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const nop = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
 
   for (let i = 0; i < message.length; i += 1) {
-    const letter = message[i];
-    if (alpha1.includes(letter)) {
-      const index = alpha1.indexOf(letter);
-      encrypted += (alpha2[index]);
-    } else if (alpha2.includes(letter)) {
-      const index = alpha2.indexOf(letter);
-      encrypted += (alpha1[index]);
-    } else if (/\W|[0-9]|_/.test(letter)) {
-      encrypted += letter;
+    const char = message[i];
+    if (abc.includes(char)) {
+      const index = abc.indexOf(char);
+      encrypted += (nop[index]);
+    } else if (nop.includes(char)) {
+      const index = nop.indexOf(char);
+      encrypted += (abc[index]);
+    } else if (/\W|[0-9]|_/.test(char)) {
+      encrypted += char;
     }
   }
 
