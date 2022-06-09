@@ -19,7 +19,6 @@ function greed(throws) {
   let ones = throws.filter((x) => x === 1).length;
   let fives = throws.filter((x) => x === 5).length;
 
-
   if (ones >= 3) {
     score += 1000;
     /** Subtract from the ones counter, leaving only the leftovers */
