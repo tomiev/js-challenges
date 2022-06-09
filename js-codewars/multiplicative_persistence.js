@@ -22,3 +22,4 @@ function persistence(num) {
 /** Test */
 console.log(persistence(39)); /** Expect 3 */
 console.log(persistence(999)); /** Expect 4 */
+console.log(persistence(9999)); /** Expect 3 */
