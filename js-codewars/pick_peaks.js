@@ -39,7 +39,3 @@ function pickPeaks(arr) {
 
 /* Should output { pos: [3, 7, 10], peaks: [6, 3, 2]} */
 console.log(pickPeaks([3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 2, 2, 1]));
-/* Should output { pos: [2], peaks: [3]} */
-// console.log(pickPeaks([2, 1, 3, 1, 2, 2, 2, 2]));
-
-// NOTE: Rename 'Peaks' key to 'Height'
