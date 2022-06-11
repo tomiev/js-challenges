@@ -6,13 +6,13 @@ function recoverSecret(triplets) {
   triplets.forEach((triplet) => {
     const uniqueLetters = (triplet.filter((letter) => letters.includes(letter) === false));
     uniqueLetters.forEach((letter) => {
+      // implement sorting here??? instead of push, splice? how to get it to get them all in order? can't just put each element one behind.
       letters.push(letter);
     });
   });
 
+  /* Iterate over each triplet again? */
   /* Implement sorting algorithm on unique letters */
-  const sorted = letters.sort(function(a, b) => );
-  return sorted;
 }
 
 // use compare function
